@@ -1,6 +1,7 @@
 from .plugboard import Plugboard
 from .utilities import numb, alph
 from .rotor import RotorTray
+from line_profiler_pycharm import profile
 
 
 class EnigmaMachine:
@@ -18,6 +19,7 @@ class EnigmaMachine:
             cipher_text += self.encode(c)
         return cipher_text
 
+    # @profile
     def encode(self, c: str) -> str:
         self.rotor_tray.rotate()
 
@@ -28,11 +30,3 @@ class EnigmaMachine:
         c_out = self.plugboard.forward_char(alph(k))
 
         return c_out
-
-
-def main():
-    pass
-
-
-if __name__ == "__main__":
-    main()

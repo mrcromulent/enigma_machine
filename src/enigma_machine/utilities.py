@@ -4,14 +4,14 @@ import collections
 import numpy as np
 import pprint
 
-alphabet = list(ascii_uppercase)
+alphabet: list[str] = list(ascii_uppercase)
 
 
-def numb(letter):
+def numb(letter) -> int:
     return alphabet.index(letter)
 
 
-def alph(number):
+def alph(number) -> str:
     return alphabet[number]
 
 
@@ -60,7 +60,7 @@ def symmetrical_wiring_dict(wiring_str: str) -> dict[str, str]:
     return d
 
 
-def random_wiring_string():
+def random_wiring_string() -> str:
     remaining_alphabet = alphabet[:]
 
     d = dict()
@@ -82,9 +82,4 @@ def format_wiring_dict(d) -> str:
 
 
 def validate_wiring(wiring: str) -> None:
-
     assert len(wiring) == 26, f"Incorrect wiring length. {wiring=}"
-
-
-if __name__ == "__main__":
-    print(wheels)
