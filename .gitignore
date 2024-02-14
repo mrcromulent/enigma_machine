@@ -1,5 +1,6 @@
-/src/enigma_machine.egg-info/
+src/enigma_machine.egg-info/
 .coverage
-/.idea/
-/.tox/
-/venv/
+.idea/
+.tox/
+venv/
+__pycache__/
